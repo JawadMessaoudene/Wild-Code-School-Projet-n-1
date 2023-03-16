@@ -159,10 +159,16 @@ body {
     z-index: 2;
 }
 
-@keyframes closeOverlay {
-    100% {
-        transform: translateX(-100vw)
-    }
+/* toggle en JS */
+.close-overlay {
+    transform: translateX(-100vw);
+    transition: transform ease-out 1s;
+}
+
+/*toggle en JS */
+.open-overlay {
+    transform: translateX(0vw);
+    transition: transform ease-in 1s;
 }
 
 #title,
