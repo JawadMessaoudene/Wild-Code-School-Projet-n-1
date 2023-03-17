@@ -213,11 +213,3 @@ body {
     width: 6rem;
     margin-left: 1rem;
 }
-
-
-#lightmode {
-    height: 100vh;
-    width: 100vw;
-    background-color: #9BC5DF;
-    z-index: 1;
-}
