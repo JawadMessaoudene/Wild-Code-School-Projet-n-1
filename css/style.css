@@ -1,3 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* Now you can code */
+
+
+
 /* Général */
 
 * {
@@ -9,7 +151,84 @@
 
 body{
     background: #FFC069;
+    font-family: 'Quicksand', sans-serif;
 }
+
+/* shadow à appliquer à tous les boutons */
+.shadow-neumorphism {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.248), -4px -4px 8px rgba(255, 255, 255, 0.242);
+}
+
+/* overlay */
+
+#overlay-home {
+    background-color: #FFC069;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+}
+
+/* toggle en JS */
+.close-overlay {
+    transform: translateX(-100vw);
+    transition: transform ease-out 1s;
+}
+
+/*toggle en JS */
+.open-overlay {
+    transform: translateX(0vw);
+    transition: transform ease-in 1s;
+}
+
+#title,
+.text {
+    max-width: 65vw;
+    text-align: center;
+}
+
+#title {
+    color: #106194;
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+.text {
+    line-height: 1.5;
+}
+
+#outer-circle {
+    height: 10rem;
+    width: 10rem;
+    border: 1.5rem solid #9BC5DF;
+    background-color: #FFC069;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inner-circle {
+    height: 8.5rem;
+    width: 8.5rem;
+    background-color: #9BC5DF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play-button {
+    height: 6rem;
+    width: 6rem;
+    margin-left: 1rem;
+}
+
+/* lightmode */
 
 .lightmode{
     z-index: 1;
@@ -17,8 +236,6 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
-
 
 /* Barre de navigation */
 
@@ -34,7 +251,6 @@ nav{
     padding: 0 50px;
 }
 
-
 nav ul {
     list-style: none;
 }
@@ -47,7 +263,6 @@ nav ul {
 nav > div {
     display: flex;
     align-items: center;
-    /* justify-content: flex-end; */
 }
 
 .back_switch_button{ 
@@ -57,7 +272,6 @@ nav > div {
     height: 20px;
     width: 60px;
     position: absolute;
-       
 }
 
 .switch_button{
@@ -121,4 +335,3 @@ nav > div {
 #égal{
     width: 125px;
 }
-
