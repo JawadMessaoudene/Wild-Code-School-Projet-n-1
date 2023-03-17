@@ -1,0 +1,103 @@
+/* Général */
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+
+body{
+    background: #FFC069;
+}
+
+
+
+
+/* Barre de navigation */
+
+nav{   
+    height: 100px;
+    background-color: #106194;
+    border-bottom-right-radius: 50px 50px;
+    border-bottom-left-radius: 50px 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;  
+}
+
+.home_button{    
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    left: 40px;
+    top: 22px;
+}
+
+.switch_background{
+    position: absolute;    
+    height: 20px;
+    width: 60px;    
+    left: 92%;
+    top: 25px;
+}
+
+.switch_button{
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    left: 94%;
+    top: 22px;
+}
+
+/* Calculatrice */
+
+.calculator{
+    height: 640px;
+    width: 320px;
+    border-radius: 50px;
+    background: #46A5E0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
+    margin: 114px auto 46px auto;
+}
+
+.screen{
+    position: absolute;
+    margin: 42px 40px 438px;
+    width: 240px;
+    height: 160px;
+    background: #9BC5D1;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+.touches{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-template-rows: repeat(5,50px);
+    grid-gap: 20px;   
+    margin: 275px auto 40px 25px;    
+}
+
+.button{
+    width: 60px;
+    height: 60px; 
+    background: rgb(0, 179, 255);    
+    border-radius: 50px;
+    box-shadow: 4px 4px 4px rgba(240, 235, 235, 0.896), -2px -2px 4px rgba(245, 240, 240, 0.936);
+    color: white;
+    font-size: 50px;
+}
+
+#égal{
+    width: 125px;;
+}
