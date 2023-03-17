@@ -1,8 +1,7 @@
 /* Général */
 
 * {
-    box-sizing: border-box;
-    width: 100%;
+    box-sizing: border-box; 
     margin:0;
     padding:0;
 }
@@ -12,50 +11,60 @@ body{
     background: #FFC069;
 }
 
+.lightmode{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
 /* Barre de navigation */
 
-nav{   
-    height: 100px;
+nav{ 
+    width: 100vw;
+    height: 5rem;
     background-color: #106194;
-    border-bottom-right-radius: 50px 50px;
-    border-bottom-left-radius: 50px 50px;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 50px 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
+
+nav ul {
+    list-style: none;
 }
 
-nav ul li {
-    list-style: none;  
+.home_button{ 
+    width:50px ;
+    height:50px ;  
 }
 
-.home_button{    
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    left: 40px;
-    top: 22px;
+nav > div {
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
 }
 
-.switch_background{
-    position: absolute;    
+.back_switch_button{ 
+    background-color: #9BC5DF; 
+    border-radius: 50px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     height: 20px;
-    width: 60px;    
-    left: 92%;
-    top: 25px;
+    width: 60px;
+    position: absolute;
+       
 }
 
 .switch_button{
-    position: absolute;
-    height: 32px;
-    width: 32px;
-    left: 94%;
-    top: 22px;
+    right: -20px;
+    width:40px ;
+    height:40px ;
+    position: relative;
 }
 
 /* Calculatrice */
@@ -66,17 +75,28 @@ nav ul li {
     border-radius: 50px;
     background: #46A5E0;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
-    margin: 114px auto 46px auto;
+    margin: 7vh auto 5vh auto;
 }
 
 .screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     margin: 42px 40px 438px;
     width: 240px;
     height: 160px;
-    background: #9BC5D1;
+    background: #9BC5DF;
     border-radius: 50px;
     font-size: 25px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.screen>img{
+    mix-blend-mode: soft-light;
+    width:50% ;
+    height:50% ;
+    
 }
 
 .touches{
@@ -93,11 +113,12 @@ nav ul li {
     height: 60px; 
     background: rgb(0, 179, 255);    
     border-radius: 50px;
-    box-shadow: 4px 4px 4px rgba(240, 235, 235, 0.896), -2px -2px 4px rgba(245, 240, 240, 0.936);
+    border:none;
     color: white;
-    font-size: 50px;
+    font-size: 2rem;
 }
 
 #égal{
-    width: 125px;;
+    width: 125px;
 }
+
