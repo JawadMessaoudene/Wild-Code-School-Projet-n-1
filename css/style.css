@@ -142,13 +142,6 @@ table {
 
 /* Général */
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
 body {
     background: #FFC069;
     font-family: 'Quicksand', sans-serif;
@@ -159,7 +152,7 @@ body {
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.248), -4px -4px 8px rgba(255, 255, 255, 0.242);
 }
 
-/* overlay */
+/* Overlay Home */
 
 #overlay-home {
     background-color: #FFC069;
@@ -228,14 +221,8 @@ body {
     margin-left: 1rem;
 }
 
-/* lightmode */
 
-.lightmode {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/* Lightmode */
 
 /* Barre de navigation */
 
@@ -248,21 +235,18 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-}
-
-nav ul {
-    list-style: none;
 }
 
 .home_button {
-    width: 50px;
-    height: 50px;
+    width: 32px;
+    height: 32px;
+    margin-left: 10vw;
 }
 
 nav>div {
     display: flex;
     align-items: center;
+    margin-right: 15vw;
 }
 
 .back_switch_button {
@@ -275,9 +259,9 @@ nav>div {
 }
 
 .switch_button {
-    right: -20px;
-    width: 40px;
-    height: 40px;
+    right: -32px;
+    width: 32px;
+    height: 32px;
     position: relative;
 }
 
@@ -289,7 +273,7 @@ nav>div {
     border-radius: 50px;
     background: #46A5E0;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
-    margin: 7vh auto 5vh auto;
+    margin: 5vh auto 0;
 }
 
 .screen {
@@ -310,7 +294,6 @@ nav>div {
     mix-blend-mode: soft-light;
     width: 50%;
     height: 50%;
-
 }
 
 .touches {
@@ -325,13 +308,16 @@ nav>div {
 .button {
     width: 60px;
     height: 60px;
-    background: rgb(0, 179, 255);
+    background-color: #46A5E0;
     border-radius: 50px;
     border: none;
     color: white;
     font-size: 2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
-#égal {
+#result {
     width: 125px;
 }
