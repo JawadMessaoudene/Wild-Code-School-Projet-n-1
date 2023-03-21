@@ -1,3 +1,4 @@
+// Home overlay
 const playButton = document.getElementById("play-button")
 const homeOverlay = document.getElementById("overlay-home")
 const homeButton = document.querySelector(".home_button")
@@ -13,12 +14,13 @@ homeButton.addEventListener('click', toggleOverlay);
 
 //----------------------------------------------------------
 
-// DOM
-const touches = document.querySelectorAll('.button');
+// Calculator
+const touches = [...document.querySelectorAll('.button')];
 const listeKeycode = touches.map(touche => touche.dataset.key);
-const ecran = document.querySelector('.screen');
+const ecran = document.getElementById('screen-text');
 
 document.addEventListener('keydown', (e) => {
+
     const valeur = e.keyCode.toString();
     calculer(valeur)
 
