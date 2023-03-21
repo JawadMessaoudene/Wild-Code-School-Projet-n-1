@@ -286,8 +286,13 @@ nav>div {
     height: 160px;
     background: #9BC5DF;
     border-radius: 50px;
-    font-size: 25px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: right;
+    padding: 40px 5px 0 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .screen>img {
