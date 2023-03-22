@@ -143,11 +143,32 @@ nav>div {
 #gamemode>button {
     width: 20%;
     height: 100%;
-    background-color: var(--dark-red);
+   background-color: var(--dark-red);
     color: white;
     border-radius: 50px;
     box-shadow: var(--shadow-neumorphism);
     text-align: center;
+    transition: all 0.2s ease-in;
+}
+
+
+
+#gm1:hover, #gm2:hover, #gm3:hover {
+    background-color: #FFC069;
+}
+
+.dark-mode {
+    background-color: var(--light-color);
+}
+/* -------------------------------- */
+.second-mode {background-color: green;}
+.third-mode {background-color: violet;}
+/* -------------------------------- */
+.button:hover {
+    background-color: #FFC069;
+}
+.button:active {
+    background-color: #000000;
 }
 
 #screen {
@@ -160,6 +181,20 @@ nav>div {
     background: var(--light-red);
     border-radius: 50px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-consigne {
+font-size: 1.2rem;
+color: black;
+font-family: quicksand;
+height: 120px;
+}
+
+#screen-text {
+border: #4efc4b solid 2px;
+font-size: 1.2rem;
+color: black;
+font-family: quicksand;
 }
 
 #screen>img {
@@ -206,6 +241,7 @@ nav>div {
     font-weight: bold;
     text-align: center;
     box-shadow: var(--shadow-neumorphism);
+    transition: all 0.2s ease-in-out;
 }
 
 
