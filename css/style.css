@@ -156,7 +156,7 @@ body {
 
 #overlay-home {
     background-color: #FFC069;
-    position: fixed;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -237,7 +237,7 @@ nav {
     align-items: center;
 }
 
-.home_button {
+#home-button {
     width: 32px;
     height: 32px;
     margin-left: 10vw;

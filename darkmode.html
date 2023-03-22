@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/darkstyle.css">
+    <title>Dark Gloomy</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><img src="assets/home_button_dark.svg" alt="home button" class="nav-buttons" id="home-button"></li>
+            <li><img src="assets/info_button_darkmode.svg" alt="info button" class="nav-buttons" id="info-button"></li>
+        </ul>
+        <div>
+            <div id="switch-button-bg"></div>
+            <img src="assets/switch_button_angry.svg" alt="angry face button" id="switch-button">
+        </div>
+    </nav>
+
+    <div id="info-overlay" class="close-overlay"></div>
+
+    <div id="calculator">
+        <div id="bubble"></div>
+        <div id="tail"></div>
+        <div id="gamemode">
+            <button id="gm1">1</button>
+            <button id="gm2">2</button>
+            <button id="gm3">3</button>
+        </div>
+        <div id="screen">
+            <img src="assets/face_angry.svg" alt="angry face">
+            <div id="screen-text"></div>
+        </div>
+        <div id="keys">
+            <button data-key="103" class="button" id="k7">7</button>
+            <button data-key="104" class="button" id="k8">8</button>
+            <button data-key="105" class="button" id="k9">9</button>
+            <button data-key="96" class="button" id="k0">0</button>
+            <button data-key="100" class="button" id="k4">4</button>
+            <button data-key="101" class="button" id="k5">5</button>
+            <button data-key="102" class="button" id="k6">6</button>
+            <button data-key="8" class="button" id="kc">C</button>
+            <button data-key="97" class="button" id="k1">1</button>
+            <button data-key="98" class="button" id="k2">2</button>
+            <button data-key="99" class="button" id="k3">3</button>
+            <button data-key="13" class="button" id="kenter">=</button>
+        </div>
+    </div>
+
+    <script src="./js/darkscript.js"></script>
+</body>
+
+</html>

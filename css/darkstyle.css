@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+    --light-color: #FFC069;
+    --light-red: #F5928C;
+    --red: #E5291C;
+    --dark-red: #AE0D01;
+    --dark-bg: #08131A;
+    --shadow-white: 2px 4px 4px rgba(132, 132, 132, 0.25);
+    --shadow-black: 2px 4px 4px rgba(40, 40, 40, 0.25);
+    --shadow-neumorphism: 4px 4px 8px rgba(0, 0, 0, 0.248), -2px -2px 8px rgba(255, 255, 255, 0.242);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    font-family: "Quicksand", sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+}
+
+/* Navbar */
+
+nav {
+    width: 100vw;
+    height: 5rem;
+    background-color: var(--dark-red);
+    border-radius: 0 0 50px 50px;
+    box-shadow: var(--shadow-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-buttons {
+    width: 32px;
+    height: 32px;
+    margin-left: 10vw;
+}
+
+nav>div {
+    display: flex;
+    align-items: center;
+    margin-right: 15vw;
+}
+
+#switch-button-bg {
+    background-color: var(--light-red);
+    border-radius: 50px;
+    box-shadow: var(--shadow-black);
+    height: 20px;
+    width: 60px;
+    position: absolute;
+}
+
+#switch-button {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+/* Info overlay */
+
+#info-overlay {
+    position: absolute;
+    height: 50vh;
+    width: 50vw;
+    background-color: #FFC069;
+    z-index: 2;
+}
+
+/*toggle en JS */
+.close-overlay {
+    transform: translateY(-100vh);
+    transition: transform ease-out 1s;
+}
+
+/*toggle en JS */
+.open-overlay {
+    transform: translateY(0vh);
+    transition: transform ease-in 1s;
+}
+
+/* Calculator */
+
+#calculator {
+    position: relative;
+    height: 640px;
+    width: 320px;
+    border-radius: 50px;
+    background: var(--red);
+    box-shadow: var(--shadow-white), -2px -2px 4px rgba(0, 0, 0, 0.25);
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+#bubble {
+    position: static;
+    width: 80%;
+    height: 25%;
+    background-color: var(--light-color);
+    border-radius: 50px;
+    box-shadow: var(--shadow-black);
+    padding: 20px;
+}
+
+#tail {
+    position: absolute;
+    top: 29%;
+    left: 21%;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 20px solid var(--light-color);
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
+
+#gamemode {
+    width: 80%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#gamemode>button {
+    width: 20%;
+    height: 100%;
+    background-color: var(--dark-red);
+    color: white;
+    border-radius: 50px;
+    box-shadow: var(--shadow-neumorphism);
+    text-align: center;
+}
+
+#screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 20%;
+    background: var(--light-red);
+    border-radius: 50px;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#screen>img {
+    position: absolute;
+    mix-blend-mode: soft-light;
+    width: 50%;
+    height: 50%;
+}
+
+#screen>div {
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #08131A;
+    overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+#keys {
+    width: 85%;
+    position: relative;
+    display: grid;
+    /* grid-template-areas:
+        "7 8 9 0"
+        "4 5 6 C"
+        "1 2 3 ="; */
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(3, 50px);
+    grid-gap: 20px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    background-color: var(--red);
+    border-radius: 50px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: var(--shadow-neumorphism);
+}
+
+
+/* #k0 {
+    grid-area: 0;
+}
+
+#k1 {
+    grid-area: 1;
+}
+
+#k2 {
+    grid-area: 2;
+}
+
+#k3 {
+    grid-area: 3;
+}
+
+#k4 {
+    grid-area: 4;
+}
+
+#k5 {
+    grid-area: 5;
+}
+
+#k6 {
+    grid-area: 6;
+}
+
+#k7 {
+    grid-area: 7;
+}
+
+#k8 {
+    grid-area: 8;
+}
+
+#k9 {
+    grid-area: 9;
+}
+
+#kc {
+    grid-area: C;
+}
+
+#kenter {
+    grid-area: =;
+} */

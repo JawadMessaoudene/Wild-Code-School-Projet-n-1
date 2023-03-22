@@ -1,7 +1,7 @@
 // Home overlay
 const playButton = document.getElementById("play-button")
 const homeOverlay = document.getElementById("overlay-home")
-const homeButton = document.querySelector(".home_button")
+const homeButton = document.getElementById("home-button")
 
 function toggleOverlay() {
     homeOverlay.classList.toggle("close-overlay")
@@ -48,4 +48,12 @@ const calculer = (valeur) => {
                 ecran.textContent += touche.innerHTML;
         }
     }
+}
+
+
+module.exports = {
+    playButton,
+    homeOverlay,
+    homeButton,
+    toggleOverlay,
 }
