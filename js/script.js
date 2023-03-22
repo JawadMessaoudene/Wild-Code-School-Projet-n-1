@@ -49,11 +49,3 @@ const calculer = (valeur) => {
         }
     }
 }
-
-
-module.exports = {
-    playButton,
-    homeOverlay,
-    homeButton,
-    toggleOverlay,
-}
