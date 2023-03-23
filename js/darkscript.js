@@ -24,6 +24,7 @@ const toggleInfos = () => {
     infoOverlay.classList.toggle("open-info-overlay");
 }
 
+
 // const toggle = false;
 
 // function toggleImg() {
