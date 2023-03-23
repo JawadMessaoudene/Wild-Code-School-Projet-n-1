@@ -143,8 +143,8 @@ table {
 /* Général */
 
 body {
-    background: rgb(155,197,223);
-background: linear-gradient(90deg, rgba(155,197,223,1) 15%, rgba(255,192,105,1) 50%, rgba(155,197,223,1) 85%);
+    background: rgb(155, 197, 223);
+    /* background: linear-gradient(90deg, rgba(155,197,223,1) 15%, rgba(255,192,105,1) 50%, rgba(155,197,223,1) 85%); */
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -228,6 +228,8 @@ background: linear-gradient(90deg, rgba(155,197,223,1) 15%, rgba(255,192,105,1) 
 /* Barre de navigation */
 
 nav {
+    position: relative;
+    margin-inline: auto;
     width: 100vw;
     height: 5rem;
     background-color: #106194;
@@ -274,7 +276,7 @@ nav>div {
     border-radius: 50px;
     background: #46A5E0;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25), -2px -2px 4px rgba(0, 0, 0, 0.25);
-    margin: 5vh auto 0;
+    margin: 5vh auto;
 }
 
 .screen {
@@ -335,4 +337,19 @@ nav>div {
 
 #result {
     width: 125px;
+}
+
+@media screen and (min-width: 769px) {
+
+    nav {
+        width: 769px;
+    }
+
+    #home-button {
+        margin-left: 80px;
+    }
+
+    nav>div {
+        margin-right: 120px;
+    }
 }
