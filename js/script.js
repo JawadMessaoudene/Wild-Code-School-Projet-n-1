@@ -1,4 +1,4 @@
-// Home overlay
+//  --------   Home overlay   ---------------------------
 const playButton = document.getElementById("play-button")
 const homeOverlay = document.getElementById("overlay-home")
 const homeButton = document.getElementById("home-button")

@@ -21,7 +21,8 @@
 }
 
 body {
-    background-color: var(--dark-bg);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(142, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 
@@ -233,7 +234,34 @@ nav>div {
     box-shadow: var(--shadow-neumorphism);
     text-align: center;
     font-weight: bold;
+    transition: all 0.2s ease-in;
 }
+
+/*  Buttons interaction  */
+
+#gm1:hover,
+#gm2:hover,
+#gm3:hover {
+    background-color: #FFC069;
+}
+
+#gm1:hover,
+#gm2:hover,
+#gm3:hover {
+    background-color: #FFC069;
+}
+
+
+.button:hover {
+    background-color: #FFC069;
+}
+
+.button:active {
+    background-color: #000000;
+}
+
+/*---------------------*/
+
 
 #screen {
     display: flex;
@@ -245,6 +273,19 @@ nav>div {
     background: var(--light-red);
     border-radius: 50px;
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.text-consigne {
+    font-size: 1.2rem;
+    color: black;
+    font-family: quicksand;
+    height: 120px;
+}
+
+#screen-text {
+    font-size: 1.2rem;
+    color: black;
+    font-family: quicksand;
 }
 
 #screen>img {
@@ -287,6 +328,7 @@ nav>div {
     font-weight: bold;
     text-align: center;
     box-shadow: var(--shadow-neumorphism);
+    transition: all 0.2s ease-in-out;
 }
 
 @media screen and (min-width: 769px) {
