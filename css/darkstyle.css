@@ -21,7 +21,8 @@
 }
 
 body {
-    background-color: var(--dark-bg);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(142,0,0,1) 50%, rgba(0,0,0,1) 100%);
 }
 
 /* Navbar */
@@ -151,25 +152,26 @@ nav>div {
     transition: all 0.2s ease-in;
 }
 
-
+/*  Buttons interaction  */
 
 #gm1:hover, #gm2:hover, #gm3:hover {
     background-color: #FFC069;
 }
 
-.dark-mode {
-    background-color: var(--light-color);
+#gm1:hover, #gm2:hover, #gm3:hover {
+    background-color: #FFC069;
 }
-/* -------------------------------- */
-.second-mode {background-color: green;}
-.third-mode {background-color: violet;}
-/* -------------------------------- */
+
+
 .button:hover {
     background-color: #FFC069;
 }
 .button:active {
     background-color: #000000;
 }
+
+/*---------------------*/
+
 
 #screen {
     display: flex;
@@ -191,7 +193,6 @@ height: 120px;
 }
 
 #screen-text {
-border: #4efc4b solid 2px;
 font-size: 1.2rem;
 color: black;
 font-family: quicksand;
