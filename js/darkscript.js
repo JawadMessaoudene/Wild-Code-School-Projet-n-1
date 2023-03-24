@@ -16,7 +16,6 @@ homeButton.addEventListener('click', toggleOverlay);
 // Infos
 
 const infoButton = document.getElementById("info-button");
-// const infoButtonSrc = document.getElementById("info-button").src;
 const infoOverlay = document.getElementById("info-overlay");
 
 const toggleInfos = () => {
@@ -25,22 +24,6 @@ const toggleInfos = () => {
 }
 
 infoButton.addEventListener('click', toggleInfos);
-// infoButton.addEventListener('click', toggleImg);
-
-// --------------   Queue de la bulle    --------------------------------
-
-const bubbleTail = document.getElementById("tail");
-const gameMode1 = document.getElementById("gm1");
-const gameMode2 = document.getElementById("gm2");
-const gameMode3 = document.getElementById("gm3");
-
-const tailPosition = (e) => {
-    let idButton = e.target;
-    console.log(idButton);
-    //     switch (gameMode) {
-    //         case gameMode1:
-    //     }
-}
 
 // --------------   Définition des variable + page par défaut    --------------------------------
 
@@ -51,7 +34,7 @@ const body = document.querySelector("body");
 const ecranConsigne = document.querySelector("#bubble");
 const textConsigne = document.querySelector("#userText");
 textConsigne.classList.add("text-consigne");
-textConsigne.innerText = "Selectionne un mode de jeu"; // constante a utiliser pour modifier le texte dans l'écran de consigne
+textConsigne.innerText = "Commence par sélectionner un mode de jeu :"; // constante a utiliser pour modifier le texte dans l'écran de consigne
 function reset() {
     guessedNumber = 0;
 }
@@ -96,7 +79,7 @@ const calculer = (valeur) => {
 
 
 gameModeOne.addEventListener("click", function () {
-    textConsigne.innerText = "Commence par entrer un nombre";
+    textConsigne.innerText = "Devine à quel nombre je pense...";
 
     const checkButton = document.getElementById("kenter");
 
@@ -110,7 +93,7 @@ gameModeOne.addEventListener("click", function () {
         console.log(guessedNumber);
         if (guessedNumber == priceToFind) {
             textConsigne.innerText =
-                "Vous avez trouvé ! Cliquez sur le Bouton 1 pour relancer une partie";
+                "Tu as trouvé ! Clique sur le Bouton 1 pour relancer une partie";
         } else if (guessedNumber > priceToFind) {
             textConsigne.innerText = "Trop haut !";
         } else {
@@ -152,8 +135,8 @@ gameModeTwo.addEventListener("click", function () {
     }
 
     const statement = `${X1}  ${operator}  ${X2}`;
-    textConsigne.innerText = `Quelle est le résultat du calcul suivant : ${statement} ?`;
-    console.log(`Quelle est le résultat du calcul suivant : ${statement} ?`);
+    textConsigne.innerText = `Quel est le résultat du calcul suivant : ${statement} ?`;
+    console.log(`Quel est le résultat du calcul suivant : ${statement} ?`);
     ///console.log(ecran.textContent);
 
     checkButton.addEventListener("click", () => {
@@ -165,7 +148,7 @@ gameModeTwo.addEventListener("click", function () {
             guessedNumber2 === X1 * X2 ||
             guessedNumber2 === X1 - X2
         ) {
-            textConsigne.innerText = `Bravo !! le résultat de l'opération  (${statement}) était bien  ${guessedNumber2}`;
+            textConsigne.innerText = `Bravo ! le résultat de l'opération  (${statement}) était bien  ${guessedNumber2}`;
             reset();
             console.log(guessedNumber2);
         } else {
@@ -204,8 +187,8 @@ gameModeThree.addEventListener("click", function () {
     }
 
     const statement = `${X1}  ${operator}  ${X2}`;
-    textConsigne.innerText = `Masterclass : Quelle est le résultat du calcul suivant : ${statement} ?`;
-    console.log(`Quelle est le résultat du calcul suivant : ${statement} ?`);
+    textConsigne.innerText = `Masterclass : Quel est le résultat du calcul suivant : ${statement} ?`;
+    console.log(`Quel est le résultat du calcul suivant : ${statement} ?`);
     ///console.log(ecran.textContent);
 
     checkButton.addEventListener("click", () => {
@@ -217,7 +200,7 @@ gameModeThree.addEventListener("click", function () {
             guessedNumber2 === X1 * X2 ||
             guessedNumber2 === X1 - X2
         ) {
-            textConsigne.innerText = "Bonne réponse";
+            textConsigne.innerText = "Bonne réponse !";
             reset();
             console.log(guessedNumber2);
         } else {
@@ -226,3 +209,35 @@ gameModeThree.addEventListener("click", function () {
         }
     });
 });
+
+// -------------------------   Queue de la bulle   ----------------------------------------------------------
+
+const bubbleTail = document.getElementById("tail");
+
+// let bubbleTailPosition = (gamemode) => {
+//     switch (gamemode) {
+//         case (gameModeOne):
+//             bubbleTail.style.left = 21 %;
+//             break;
+//         case (gameModeTwo):
+//             bubbleTail.style.left = 43.5 %;
+//             break;
+//         case (gameModeThree):
+//             bubbleTail.style.left = 66 %;
+//             break;
+//     }
+// }
+
+// gameModeThree.addEventListener('click', bubbleTailPosition(gameModeThree));
+
+// gameModeOne.addEventListener('click', () => {
+// bubbleTail.style.left = 21 %;
+// })
+
+// gameModeTwo.addEventListener('click', () => {
+//     bubbleTail.style.left = 43.5%;
+// })
+
+// gameModeThree.addEventListener('click', () => {
+//     bubbleTail.style.left = 66%;
+// })

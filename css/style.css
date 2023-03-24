@@ -143,8 +143,7 @@ table {
 /* Général */
 
 body {
-    background: rgb(155, 197, 223);
-    /* background: linear-gradient(90deg, rgba(155,197,223,1) 15%, rgba(255,192,105,1) 50%, rgba(155,197,223,1) 85%); */
+    background-color: #FFC069;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -206,6 +205,12 @@ body {
     align-items: center;
 }
 
+#outer-circle:hover {
+    height: 10.5rem;
+    width: 10.5rem;
+    transition: 0.5s;
+}
+
 #inner-circle {
     height: 8.5rem;
     width: 8.5rem;
@@ -214,6 +219,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#inner-circle:hover {
+    height: 9rem;
+    width: 9rem;
+    transition: 0.5s;
 }
 
 #play-button {
@@ -246,6 +257,20 @@ nav {
     margin-left: 10vw;
 }
 
+#home-button:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+#nav-title {
+    display: none;
+    position: absolute;
+    left: 42.5%;
+    color: white;
+    font-size: xx-large;
+}
+
 nav>div {
     display: flex;
     align-items: center;
@@ -258,7 +283,7 @@ nav>div {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     height: 20px;
     width: 60px;
-    position: absolute;
+    position: fixed;
 }
 
 .switch_button {
@@ -266,6 +291,12 @@ nav>div {
     width: 32px;
     height: 32px;
     position: relative;
+}
+
+.switch_button:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
 }
 
 /* Calculatrice */
@@ -339,6 +370,30 @@ nav>div {
     width: 125px;
 }
 
+.button:hover {
+    background-color: #FFC069;
+    transition: 0.5s;
+}
+
+.button:active {
+    background-color: #000000;
+}
+
+#footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #106194;
+}
+
+#footer>p {
+    color: white;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
 @media screen and (min-width: 769px) {
 
     nav {
@@ -349,7 +404,35 @@ nav>div {
         margin-left: 80px;
     }
 
+    #nav-title {
+        display: initial;
+    }
+
     nav>div {
         margin-right: 120px;
+    }
+
+    li,
+    button,
+    #inner-circle {
+        cursor: pointer;
+    }
+
+    .calculator {
+        animation: glow 4s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 600px -200px #b0f8ff;
+        }
+
+        to {
+            box-shadow: 0 0 600px 200px #b0f8ff;
+        }
+    }
+
+    #footer {
+        display: initial;
     }
 }

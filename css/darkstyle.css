@@ -21,8 +21,7 @@
 }
 
 body {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(142, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    background-color: var(--dark-bg);
 }
 
 
@@ -31,13 +30,13 @@ body {
 /* toggle en JS */
 .close-home-overlay {
     transform: translateX(-100vw);
-    transition: transform ease-out 1s;
+    transition: transform ease-out 2s;
 }
 
 /*toggle en JS */
 .open-home-overlay {
     transform: translateX(100vw);
-    transition: transform ease-in 1s;
+    transition: transform ease-in 1.5s;
 }
 
 #overlay-home {
@@ -62,6 +61,7 @@ body {
 #title {
     color: var(--dark-red);
     font-size: 3.2rem;
+    font-weight: bold;
 }
 
 .text {
@@ -80,6 +80,12 @@ body {
     box-shadow: var(--shadow-neumorphism);
 }
 
+#outer-circle:hover {
+    height: 13.5rem;
+    width: 13.5rem;
+    transition: 0.5s;
+}
+
 #inner-circle {
     height: 8.5rem;
     width: 8.5rem;
@@ -89,6 +95,12 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow-neumorphism);
+}
+
+#inner-circle:hover {
+    height: 9rem;
+    width: 9rem;
+    transition: 0.5s;
 }
 
 #play-button {
@@ -125,6 +137,26 @@ ul {
     margin-left: 10vw;
 }
 
+#home-button:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+#info-button:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
+
+#nav-title {
+    display: none;
+    position: absolute;
+    left: 45%;
+    color: white;
+    font-size: xx-large;
+}
+
 nav>div {
     display: flex;
     align-items: center;
@@ -146,6 +178,11 @@ nav>div {
     position: relative;
 }
 
+#switch-button:hover {
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+}
 
 /* Info overlay */
 
@@ -245,15 +282,9 @@ nav>div {
     background-color: #FFC069;
 }
 
-#gm1:hover,
-#gm2:hover,
-#gm3:hover {
-    background-color: #FFC069;
-}
-
-
 .button:hover {
     background-color: #FFC069;
+    transition: 0.5s;
 }
 
 .button:active {
@@ -277,15 +308,9 @@ nav>div {
 
 .text-consigne {
     font-size: 1.2rem;
-    color: black;
-    font-family: quicksand;
-    height: 120px;
-}
-
-#screen-text {
-    font-size: 1.2rem;
-    color: black;
-    font-family: quicksand;
+    height: 100px;
+    width: 200px;
+    margin: 5px auto;
 }
 
 #screen>img {
@@ -331,7 +356,23 @@ nav>div {
     transition: all 0.2s ease-in-out;
 }
 
+#footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #AE0D01;
+}
+
+#footer>p {
+    color: white;
+    margin-left: 20px;
+    margin-top: 12.5px;
+}
+
 @media screen and (min-width: 769px) {
+
     nav {
         width: 769px;
     }
@@ -340,11 +381,39 @@ nav>div {
         margin-left: 80px;
     }
 
+    #nav-title {
+        display: initial;
+    }
+
     nav>div {
         margin-right: 120px;
     }
 
     #info-bg {
         width: 620px;
+    }
+
+    li,
+    button,
+    #inner-circle {
+        cursor: pointer;
+    }
+
+    #calculator {
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 0 0 600px -200px var(--dark-red);
+        }
+
+        to {
+            box-shadow: 0 0 600px 200px var(--dark-red);
+        }
+    }
+
+    #footer {
+        display: initial;
     }
 }
