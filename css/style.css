@@ -419,16 +419,16 @@ nav>div {
     }
 
     .calculator {
-        animation: glow 5s infinite alternate;
+        animation: glow 4s infinite alternate;
     }
 
     @keyframes glow {
         from {
-            box-shadow: 0 0 600px -200px #9bc5df94;
+            box-shadow: 0 0 600px -200px #b0f8ff;
         }
 
         to {
-            box-shadow: 0 0 600px 200px #9bc5df94;
+            box-shadow: 0 0 600px 200px #b0f8ff;
         }
     }
 

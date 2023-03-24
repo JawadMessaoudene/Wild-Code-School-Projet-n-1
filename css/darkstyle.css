@@ -400,7 +400,7 @@ nav>div {
     }
 
     #calculator {
-        animation: glow 5s infinite alternate;
+        animation: glow 2s infinite alternate;
     }
 
     @keyframes glow {
