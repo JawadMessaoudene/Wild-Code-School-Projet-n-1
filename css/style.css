@@ -192,6 +192,7 @@ body {
 
 .text {
     line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 #outer-circle {
@@ -205,11 +206,6 @@ body {
     align-items: center;
 }
 
-#outer-circle:hover {
-    height: 10.5rem;
-    width: 10.5rem;
-    transition: 0.5s;
-}
 
 #inner-circle {
     height: 8.5rem;
@@ -219,12 +215,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#inner-circle:hover {
-    height: 9rem;
-    width: 9rem;
-    transition: 0.5s;
 }
 
 #play-button {
@@ -257,12 +247,6 @@ nav {
     margin-left: 10vw;
 }
 
-#home-button:hover {
-    width: 40px;
-    height: 40px;
-    transition: 0.5s;
-}
-
 #nav-title {
     display: none;
     position: absolute;
@@ -291,12 +275,6 @@ nav>div {
     width: 32px;
     height: 32px;
     position: relative;
-}
-
-.switch_button:hover {
-    width: 40px;
-    height: 40px;
-    transition: 0.5s;
 }
 
 /* Calculatrice */
@@ -370,11 +348,6 @@ nav>div {
     width: 125px;
 }
 
-.button:hover {
-    background-color: #FFC069;
-    transition: 0.5s;
-}
-
 .button:active {
     background-color: #000000;
 }
@@ -434,5 +407,36 @@ nav>div {
 
     #footer {
         display: initial;
+    }
+
+    /* Hovers */
+
+    #outer-circle:hover {
+        height: 10.5rem;
+        width: 10.5rem;
+        transition: 0.5s;
+    }
+
+    #inner-circle:hover {
+        height: 9rem;
+        width: 9rem;
+        transition: 0.5s;
+    }
+
+    #home-button:hover {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+
+    .switch_button:hover {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+
+    .button:hover {
+        background-color: #FFC069;
+        transition: 0.5s;
     }
 }
