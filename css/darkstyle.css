@@ -232,6 +232,7 @@ nav>div {
     border-top: 20px solid var(--light-color);
     border-right: 20px solid transparent;
     border-left: 20px solid transparent;
+    transition: 1s;
 }
 
 #gamemode {
