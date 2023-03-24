@@ -66,6 +66,7 @@ body {
 
 .text {
     line-height: 1.5;
+    font-size: 1.2rem;
 }
 
 #outer-circle {
@@ -80,12 +81,6 @@ body {
     box-shadow: var(--shadow-neumorphism);
 }
 
-#outer-circle:hover {
-    height: 13.5rem;
-    width: 13.5rem;
-    transition: 0.5s;
-}
-
 #inner-circle {
     height: 8.5rem;
     width: 8.5rem;
@@ -95,12 +90,6 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow-neumorphism);
-}
-
-#inner-circle:hover {
-    height: 9rem;
-    width: 9rem;
-    transition: 0.5s;
 }
 
 #play-button {
@@ -137,18 +126,6 @@ ul {
     margin-left: 10vw;
 }
 
-#home-button:hover {
-    width: 40px;
-    height: 40px;
-    transition: 0.5s;
-}
-
-#info-button:hover {
-    width: 40px;
-    height: 40px;
-    transition: 0.5s;
-}
-
 #nav-title {
     display: none;
     position: absolute;
@@ -178,12 +155,6 @@ nav>div {
     position: relative;
 }
 
-#switch-button:hover {
-    width: 40px;
-    height: 40px;
-    transition: 0.5s;
-}
-
 /* Info overlay */
 
 #info-overlay {
@@ -200,6 +171,15 @@ nav>div {
     width: 80vw;
     background-color: #FFC069;
     border-radius: 0 0 50px 50px;
+    padding-top: 120px;
+    padding-inline: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#info-bg>p {
+    font-size: 1.2rem;
 }
 
 /*toggle en JS */
@@ -275,17 +255,6 @@ nav>div {
 }
 
 /*  Buttons interaction  */
-
-#gm1:hover,
-#gm2:hover,
-#gm3:hover {
-    background-color: #FFC069;
-}
-
-.button:hover {
-    background-color: #FFC069;
-    transition: 0.5s;
-}
 
 .button:active {
     background-color: #000000;
@@ -415,5 +384,48 @@ nav>div {
 
     #footer {
         display: initial;
+    }
+
+    /* Hovers */
+
+    #outer-circle:hover {
+        height: 13.5rem;
+        width: 13.5rem;
+        transition: 0.5s;
+    }
+
+    #inner-circle:hover {
+        height: 9rem;
+        width: 9rem;
+        transition: 0.5s;
+    }
+
+    #home-button:hover {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+
+    #info-button:hover {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+
+    #switch-button:hover {
+        width: 40px;
+        height: 40px;
+        transition: 0.5s;
+    }
+
+    #gm1:hover,
+    #gm2:hover,
+    #gm3:hover {
+        background-color: #FFC069;
+    }
+
+    .button:hover {
+        background-color: #FFC069;
+        transition: 0.5s;
     }
 }
