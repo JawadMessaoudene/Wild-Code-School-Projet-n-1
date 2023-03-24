@@ -106,7 +106,7 @@ gameModeOne.addEventListener("click", function () {
       tooHigh = "Tu te prend pour qui ?! Redescend un peu là";
       break;
     case 1:
-      tooHigh = "Abuse pas non plus !!";
+      tooHigh = "Abuse pas non plus !! C'est plus !";
       break;
     case 2:
       tooHigh = "C'est un peu trop à mon goût...";
